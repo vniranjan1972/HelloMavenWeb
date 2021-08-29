@@ -11,4 +11,38 @@
   	<failOnMissingWebXml>false</failOnMissingWebXml>
   </properties>
   <version>V1</version>
+  
+  <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub Owner Niranjan Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/vniranjan1972/HelloMavenWeb</url>
+   </repository>
+</distributionManagement>
+  
+    <build>
+    <!-- To define the plugin version in your parent POM -->
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.3.9</version>
+        </plugin>
+        
+      </plugins>
+    </pluginManagement>
+    <!-- To use the plugin goals in your POM or parent POM -->
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.3.9</version>
+      </plugin>
+      
+    </plugins>
+  
+  </build>
+  
+  
 </project>
